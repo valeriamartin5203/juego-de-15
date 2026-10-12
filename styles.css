@@ -100,7 +100,7 @@ h1 span {
     justify-content: space-between;
     align-items: center;
     padding: 10px 12px;
-    background: #fff4c9;
+    background: #fde170;
     border-radius: 8px;
 }
 
@@ -221,9 +221,9 @@ h1 span {
     background: #f2c13a;
 }
 
-.boton-ia {
+.boton-a {
     color: white;
-    background: #397653;
+    background: #da8d19;
 }
 
 .boton-secundario {
@@ -308,9 +308,14 @@ footer {
     }
 
     .panel-juego,
-    .panel-algoritmo {
+    .panel-algoritmo,
+    .panel-instrucciones {
         padding: 14px;
         border-radius: 15px;
+    }
+
+    .lista-instrucciones {
+        grid-template-columns: 1fr;
     }
 
     .tablero {
@@ -322,4 +327,65 @@ footer {
         font-size: 0.82rem;
         padding: 12px 6px;
     }
+}
+
+.panel-instrucciones {
+    margin-top: 20px;
+    padding: 22px;
+    background: linear-gradient(115deg, #fffdf4, #fff5cd);
+    border: 1px solid #e2c15f;
+    border-left: 5px solid #da8d19;
+    border-radius: 12px;
+    box-shadow: 0 12px 28px #76520c1c;
+}
+
+.panel-instrucciones h2 {
+    margin-bottom: 8px;
+    color: #49350e;
+    font-size: 1.3rem;
+}
+
+.panel-instrucciones > p {
+    color: #625333;
+    line-height: 1.6;
+}
+
+.lista-instrucciones {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 18px;
+    margin-top: 12px;
+    list-style: none;
+    counter-reset: paso;
+}
+
+.lista-instrucciones li {
+    position: relative;
+    min-width: 0;
+    padding: 13px 4px 13px 38px;
+    border-top: 1px solid #eadba8;
+    color: #514323;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    counter-increment: paso;
+}
+
+.lista-instrucciones li::before {
+    content: counter(paso);
+    position: absolute;
+    top: 12px;
+    left: 0;
+    display: grid;
+    width: 25px;
+    aspect-ratio: 1;
+    place-items: center;
+    border-radius: 50%;
+    color: #fffdf4;
+    background: #8b6210;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.lista-instrucciones strong {
+    color: #49350e;
 }
