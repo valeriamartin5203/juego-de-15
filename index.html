@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111827">
+    <title>Juego del 15 | Algoritmo A*</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="contenedor">
+        <header class="encabezado">
+            <p class="etiqueta">ALGORITMOS DE BÚSQUEDA</p>
+            <h1>Juego del <span>15</span></h1>
+            <p class="descripcion">
+                Ordena las fichas del 1 al 15. ¿Podrás resolverlo
+                antes que el algoritmo A*?
+            </p>
+        </header>
+
+        <section class="panel-juego">
+            <div class="informacion">
+                <div class="dato">
+                    <span>Movimientos</span>
+                    <strong id="movimientos">0</strong>
+                </div>
+                <div class="dato">
+                    <span>Tiempo</span>
+                    <strong id="tiempo">00:00</strong>
+                </div>
+                <div class="dato">
+                    <span>Estado</span>
+                    <strong id="estado">Listo</strong>
+                </div>
+            </div>
+
+            <div class="marcador" aria-label="Marcador de partidas">
+                <div class="puntuacion">
+                    <span>Victorias</span>
+                    <strong id="victorias">0</strong>
+                </div>
+                <div class="puntuacion">
+                    <span>Derrotas</span>
+                    <strong id="derrotas">0</strong>
+                </div>
+            </div>
+
+            <div id="tablero" class="tablero"
+                 role="group" aria-label="Tablero del juego del 15">
+            </div>
+
+            <div class="botones">
+                <button id="btnMezclar" class="boton boton-principal">
+                    Mezclar fichas
+                </button>
+                <button id="btnResolver" class="boton boton-ia">
+                    Resolver con A*
+                </button>
+                <button id="btnReiniciar" class="boton boton-secundario">
+                    Reiniciar
+                </button>
+            </div>
+
+            <p id="mensaje" class="mensaje" role="status" aria-live="polite">
+                Pulsa una ficha junto al espacio vacío para moverla.
+            </p>
+        </section>
+
+        <section class="panel-algoritmo">
+            <h2>¿Qué está haciendo la IA?</h2>
+            <p>
+                El algoritmo A* explora diferentes estados del tablero
+                hasta encontrar una ruta hacia la solución.
+            </p>
+
+            <div class="formula">
+                <span>f(n) = g(n) + h(n)</span>
+            </div>
+
+            <div class="explicacion">
+                <p><strong>g(n):</strong> movimientos realizados desde el inicio.</p>
+                <p><strong>h(n):</strong> distancia Manhattan estimada hasta la meta.</p>
+                <p><strong>f(n):</strong> costo estimado total de la ruta.</p>
+            </div>
+
+            <div class="estadisticas">
+                <div>
+                    <span>Nodos explorados</span>
+                    <strong id="nodos">0</strong>
+                </div>
+                <div>
+                    <span>Pasos de la solución</span>
+                    <strong id="pasos">0</strong>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            Proyecto educativo · JavaScript · Algoritmo A*
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
