@@ -43,3 +43,9 @@ La búsqueda utiliza una cola de prioridad y explora como máximo 120,000 nodos 
 ## Tecnologías
 
 HTML, CSS y JavaScript, sin bibliotecas externas.
+
+## Pagina web
+El juego esta subido en render como un sitio externo, este es el link:
+
+https://juego-de-15.onrender.com
+
